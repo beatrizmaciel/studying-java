@@ -58,6 +58,14 @@ public class exercises {
 			double r = scan.nextDouble();
 			double area = pi * r * r;
 			System.out.println("A área do círculo é: " + area);
+		
+			//Calcular área do quadrado
+			
+			System.out.println("Para descobrir a área, digite a lateral do quadrado:");
+			double lado = scan.nextDouble();
+			double areaQuadrado = lado * lado;
+			System.out.println("A área do quadrado é: " + areaQuadrado);
+			System.out.println("O dobro da área do quadrado é: " + areaQuadrado * 2);
 
 	}
 
