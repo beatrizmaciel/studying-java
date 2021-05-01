@@ -122,13 +122,19 @@ public class exercises {
 			double horasMes = scan.nextDouble();
 			double salarioBruto = hora * horasMes;
 			System.out.println("Seu salário bruto é: " + salarioBruto);
-			System.out.println("Você pagou " + ((salarioBruto*8)/100) + " ao INSS");
-			System.out.println("Você pagou " + ((salarioBruto*5)/100) + " ao sindicato");
-			System.out.println("Seu salário líquido é " + ((salarioBruto*76)/100));
-			System.out.println("O que foi descontado do seu salário foi: " + (salarioBruto*24)/100);
+			double inss = (salarioBruto / 100 * 8);
+			System.out.println("Você pagou " + inss + " ao INSS");
+			double sindicato = (salarioBruto / 100 * 5);
+			System.out.println("Você pagou " + sindicato + " ao sindicato");
+			double ir = (salarioBruto / 100 * 11);
+			double descontoSalario = inss + sindicato + ir;
+			double salarioLiquido = salarioBruto - descontoSalario;
+			System.out.println("Seu salário líquido é " + salarioLiquido);
+			System.out.println("O que foi descontado do seu salário foi: " + descontoSalario);
 			System.out.println("Em resumo. Seu salário bruto é " + salarioBruto + 
-					", foram descontados " + (salarioBruto*24)/100 + 
-					" e seu salário líquido é " + (salarioBruto*76)/100);
+					", foram descontados " + descontoSalario + 
+					" e seu salário líquido é " + salarioLiquido);
+			
 			
 			
 			// Pedir tamanho de arquivo em MB + velocidade da internet em Mbps
